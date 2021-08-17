@@ -1,0 +1,8 @@
+<h1><%= @restaurant.name %></h1>
+
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.rating %></p>
+
+<%= link_to "deletar", restaurant_path(@restaurant), method: :delete, data: { confirm: "Tem certeza champs?" } %>
+
+<%= link_to "voltar", restaurants_path %>

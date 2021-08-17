@@ -1,0 +1,12 @@
+<h1>Restaurants</h1>
+
+<% @restaurants.each do |restaurant| %>
+  <li>
+    <%= restaurant.name %>
+    <%= restaurant.address %>
+    <%= restaurant.rating %>
+    <%= link_to "ver", restaurant_path(restaurant) %>
+    <%= link_to "editar", edit_path(restaurant) %>
+    <%= link_to "deletar", restaurant_path(restaurant), method: :delete, data: { confirm: "Tem certeza champs?" } %>
+  </li>
+<% end %>
